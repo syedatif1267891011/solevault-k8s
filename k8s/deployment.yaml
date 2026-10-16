@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solevault-deployment
+  labels:
+    app: solevault
+spec:
+  # Note: Keep replicas at 1 since SQLite is an embedded single-file database.
+  replicas: 1
+  selector:
+    matchLabels:
+      app: solevault
+  template:
+    metadata:
+      labels:
+        app: solevault
+    spec:
+      containers:
+        - name: solevault-app
+          image: solevault:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: "production"
+            - name: PORT
+              value: "3000"
+          volumeMounts:
+            - name: db-volume
+              mountPath: /app/database
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      volumes:
+        - name: db-volume
+          persistentVolumeClaim:
+            claimName: solevault-pvc

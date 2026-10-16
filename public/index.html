@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLEVAULT | Next-Gen Sneaker & Footwear Platform</title>
+  <meta name="description" content="Discover, buy, and collect authentic high-performance sneakers, limited drops, and luxury footwear at SoleVault.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-content">
+      <span class="pulse-dot"></span>
+      <span class="announcement-text">🔥 <strong>SPRING DROP 2026:</strong> Free worldwide shipping on orders over $150 | Use code <span class="promo-highlight" id="copyPromo">KICKS20</span> for 20% OFF</span>
+    </div>
+    <button class="announcement-close" id="closeAnnouncement" aria-label="Close Announcement">&times;</button>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      <a href="#" class="brand-logo" id="brandLogo">
+        <div class="logo-mark">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 16l4-8 4 4 4-6 4 10H4z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span>SOLE</span><span class="logo-accent">VAULT</span>
+        </div>
+        <span class="logo-tag">EST. 2026</span>
+      </a>
+
+      <!-- Quick Category Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#catalog" class="nav-link active" data-category="All">All Drops</a>
+        <a href="#catalog" class="nav-link" data-category="Running">Running</a>
+        <a href="#catalog" class="nav-link" data-category="Basketball">Basketball</a>
+        <a href="#catalog" class="nav-link" data-category="Lifestyle">Lifestyle</a>
+        <a href="#catalog" class="nav-link" data-category="Skate">Skate</a>
+        <a href="#catalog" class="nav-link" data-category="Luxury">Luxury</a>
+      </nav>
+
+      <!-- Header Search and Actions -->
+      <div class="header-actions">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="headerSearchInput" placeholder="Search sneakers, drops..." autocomplete="off">
+          <button class="clear-search-btn" id="clearSearchBtn" style="display:none;">&times;</button>
+        </div>
+
+        <button class="action-btn" id="wishlistToggleBtn" title="View Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="action-badge" id="wishlistCount">0</span>
+        </button>
+
+        <button class="action-btn cart-trigger" id="cartToggleBtn" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="action-badge" id="cartCount">0</span>
+        </button>
+
+        <button class="admin-portal-btn" id="adminPortalToggleBtn" title="Store Admin Portal">
+          <span class="admin-indicator"></span>
+          <span>Admin Portal</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: FEATURED DROP -->
+  <section class="hero-section" id="heroDrop">
+    <div class="hero-ambient-glow"></div>
+    <div class="hero-container">
+      <div class="hero-text-content">
+        <div class="hero-badge-wrap">
+          <span class="hero-drop-badge">⚡ VAULT EXCLUSIVE DROP</span>
+          <span class="hero-release-tag">SERIES 03</span>
+        </div>
+        <h1 class="hero-title">AEROFLUX <span class="gradient-text">CARBON VOLT</span></h1>
+        <p class="hero-subtitle">
+          Sculpted for blistering velocity. Dual-density full carbon fiber plate, nitrogen-fused kinetic foam, and precision-woven aerodynamic monomesh for athletes defying gravity.
+        </p>
+
+        <div class="hero-specs-row">
+          <div class="hero-spec-item">
+            <span class="spec-value">198g</span>
+            <span class="spec-label">Ultra Featherweight</span>
+          </div>
+          <div class="hero-spec-item">
+            <span class="spec-value">88%</span>
+            <span class="spec-label">Kinetic Energy Return</span>
+          </div>
+          <div class="hero-spec-item">
+            <span class="spec-value">4.9 ★</span>
+            <span class="spec-label">Marathoner Rated</span>
+          </div>
+        </div>
+
+        <div class="hero-action-row">
+          <div class="hero-price-wrap">
+            <span class="hero-price">$219.99</span>
+            <span class="hero-orig-price">$259.99</span>
+            <span class="hero-discount-pill">-15% OFF</span>
+          </div>
+          <div class="hero-cta-buttons">
+            <button class="btn btn-primary btn-glow" id="heroQuickBuyBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>Instant Drop Bag</span>
+            </button>
+            <button class="btn btn-outline" id="heroViewDetailsBtn">View Shoe Specs</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO VISUAL / 3D-FEEL SNEAKER DISPLAY -->
+      <div class="hero-visual-content">
+        <div class="hero-card-glow"></div>
+        <div class="hero-image-wrapper" id="heroShoeDisplay">
+          <img src="/images/products/volt_runner.jpg" alt="AeroFlux Carbon Volt 3.0 Sneaker" class="hero-sneaker-img" id="heroImg">
+          <div class="floating-badge badge-top-left">
+            <span class="pulse-indicator"></span>
+            <span>Only 12 Pairs Left</span>
+          </div>
+          <div class="floating-badge badge-bottom-right">
+            <span>Verified 100% Authentic</span>
+          </div>
+        </div>
+
+        <!-- Hero Colorway Selector -->
+        <div class="hero-colorways">
+          <span class="colorways-label">Available Colorways:</span>
+          <div class="colorway-swatches">
+            <button class="swatch-btn active" data-color="volt" style="background: #ccff00;" title="Electric Volt"></button>
+            <button class="swatch-btn" data-color="black" style="background: #111111;" title="Stealth Phantom"></button>
+            <button class="swatch-btn" data-color="cyan" style="background: #00d2ff;" title="Glacier Cyan"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION BAR -->
+  <section class="trust-bar">
+    <div class="trust-container">
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <div>
+          <h4>Express Fast Delivery</h4>
+          <p>Dispatched within 24h worldwide</p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div>
+          <h4>Vault Authenticity Guarantee</h4>
+          <p>12-point authentication inspected</p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+          </svg>
+        </div>
+        <div>
+          <h4>30-Day Easy Returns</h4>
+          <p>Hassle-free size & fit exchanges</p>
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <line x1="2" y1="10" x2="22" y2="10"></line>
+          </svg>
+        </div>
+        <div>
+          <h4>Encrypted Checkout</h4>
+          <p>Bank-grade SSL secure payments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOREFRONT CATALOG SECTION -->
+  <main class="catalog-section" id="catalog">
+    <div class="catalog-container">
+      
+      <!-- Catalog Section Header -->
+      <div class="section-header">
+        <div>
+          <span class="sub-heading">CURATED SELECTION</span>
+          <h2 class="section-title">Explore Footwear Vault</h2>
+        </div>
+        <div class="catalog-count-badge">
+          Showing <span id="shownCount">0</span> styles
+        </div>
+      </div>
+
+      <!-- FILTER CONTROLS BAR -->
+      <div class="filters-panel">
+        
+        <!-- Category Chips -->
+        <div class="filter-group category-chips" id="categoryChips">
+          <button class="filter-chip active" data-category="All">All Footwear</button>
+          <button class="filter-chip" data-category="Running">🏃 Running</button>
+          <button class="filter-chip" data-category="Basketball">🏀 Basketball</button>
+          <button class="filter-chip" data-category="Lifestyle">👟 Lifestyle</button>
+          <button class="filter-chip" data-category="Skate">🛹 Skate</button>
+          <button class="filter-chip" data-category="Luxury">✨ Luxury</button>
+        </div>
+
+        <!-- Filter Sub-Row (Brand, Price, Sort) -->
+        <div class="filter-controls-row">
+          
+          <!-- Brand Select -->
+          <div class="control-box">
+            <label for="brandSelect">Brand</label>
+            <select id="brandSelect" class="custom-select">
+              <option value="All">All Brands</option>
+              <option value="Nike">Nike</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Adidas">Adidas</option>
+              <option value="SoleVault Lab">SoleVault Lab</option>
+              <option value="Vans">Vans</option>
+              <option value="SoleVault Luxe">SoleVault Luxe</option>
+            </select>
+          </div>
+
+          <!-- Price Range Slider -->
+          <div class="control-box price-control">
+            <div class="price-labels">
+              <label for="priceRange">Max Price: <strong id="priceDisplay">$350</strong></label>
+            </div>
+            <input type="range" id="priceRange" min="50" max="350" step="10" value="350" class="custom-range">
+          </div>
+
+          <!-- Sort Select -->
+          <div class="control-box">
+            <label for="sortBySelect">Sort By</label>
+            <select id="sortBySelect" class="custom-select">
+              <option value="featured">Featured & Drops</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+              <option value="rating_desc">Highest Customer Rating</option>
+              <option value="newest">Newest Releases</option>
+            </select>
+          </div>
+
+          <!-- Reset Filter Button -->
+          <div class="control-box reset-box">
+            <button class="btn btn-secondary btn-sm" id="resetFiltersBtn">Reset Filters</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically via JavaScript -->
+        <div class="loading-state">
+          <div class="loader-spinner"></div>
+          <p>Unlocking Sneaker Vault...</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- PRODUCT QUICK VIEW & DETAILS MODAL -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="modal-container product-modal" id="productModal">
+      <button class="modal-close-btn" id="closeProductModal">&times;</button>
+      
+      <div class="product-modal-grid">
+        <!-- Modal Left: Gallery -->
+        <div class="modal-gallery">
+          <div class="main-modal-image-wrap">
+            <img src="/images/products/volt_runner.jpg" alt="Shoe Detail" id="modalMainImg">
+            <span class="modal-badge" id="modalBadge">HOT DROP</span>
+          </div>
+          <div class="modal-thumbnails" id="modalThumbnails">
+            <!-- Thumbnails injected here -->
+          </div>
+        </div>
+
+        <!-- Modal Right: Product Details & Purchase Form -->
+        <div class="modal-info">
+          <div class="modal-brand" id="modalBrand">NIKE</div>
+          <h2 class="modal-title" id="modalTitle">AeroFlux Carbon Volt 3.0</h2>
+          
+          <div class="modal-rating-row">
+            <div class="star-rating" id="modalRatingStars">★★★★★</div>
+            <span class="rating-number" id="modalRatingNum">4.9</span>
+            <span class="reviews-count" id="modalReviewsCount">(84 customer reviews)</span>
+          </div>
+
+          <div class="modal-price-row">
+            <span class="modal-current-price" id="modalPrice">$219.99</span>
+            <span class="modal-orig-price" id="modalOrigPrice">$259.99</span>
+            <span class="modal-save-pill" id="modalSavePill">Save 15%</span>
+          </div>
+
+          <p class="modal-description" id="modalDesc">
+            Engineered for record-breaking speed. Features a full-length dual-density carbon fiber propulsion plate, responsive ZoomX-inspired foam, and ultra-breathable mono-mesh.
+          </p>
+
+          <!-- Colorway Picker -->
+          <div class="modal-option-group">
+            <div class="option-header">
+              <label>Select Colorway:</label>
+              <span class="selected-value" id="selectedColorName">Electric Volt</span>
+            </div>
+            <div class="color-options-wrap" id="modalColorOptions">
+              <!-- Colors injected dynamically -->
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="modal-option-group">
+            <div class="option-header">
+              <label>Select US Men's Size:</label>
+              <button class="size-guide-link" id="sizeGuideBtn">Fit & Sizing Guide</button>
+            </div>
+            <div class="size-options-grid" id="modalSizeOptions">
+              <!-- Sizes injected dynamically -->
+            </div>
+          </div>
+
+          <!-- Stock Level Bar -->
+          <div class="stock-alert-bar" id="modalStockAlert">
+            <span class="stock-dot"></span>
+            <span id="modalStockText">In Stock (12 pairs left in warehouse)</span>
+          </div>
+
+          <!-- Add to Cart CTA -->
+          <div class="modal-actions">
+            <div class="quantity-selector">
+              <button class="qty-btn" id="modalQtyMinus">-</button>
+              <input type="number" id="modalQtyInput" value="1" min="1" max="10" readonly>
+              <button class="qty-btn" id="modalQtyPlus">+</button>
+            </div>
+            <button class="btn btn-primary btn-block btn-glow" id="modalAddToCartBtn">
+              Add To Cart • <span id="modalAddToCartPrice">$219.99</span>
+            </button>
+            <button class="btn btn-icon-round" id="modalWishlistBtn" title="Add to Wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Customer Reviews Section Inside Modal -->
+          <div class="modal-reviews-section">
+            <div class="reviews-section-header">
+              <h3>Verified Buyer Reviews</h3>
+              <button class="btn btn-xs btn-outline" id="toggleWriteReviewBtn">+ Write Review</button>
+            </div>
+
+            <!-- Review submission form -->
+            <form class="write-review-form" id="writeReviewForm" style="display:none;">
+              <div class="form-row">
+                <input type="text" id="reviewAuthor" placeholder="Your Name" required class="custom-input">
+                <select id="reviewRating" class="custom-select" required>
+                  <option value="5">★★★★★ (5 Stars - Exceptional)</option>
+                  <option value="4">★★★★☆ (4 Stars - Great)</option>
+                  <option value="3">★★★☆☆ (3 Stars - Average)</option>
+                </select>
+              </div>
+              <textarea id="reviewComment" placeholder="Share your experience on fit, comfort, and style..." rows="2" required class="custom-input"></textarea>
+              <button type="submit" class="btn btn-primary btn-sm">Post Review</button>
+            </form>
+
+            <div class="reviews-list" id="modalReviewsList">
+              <!-- Reviews injected dynamically -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART SLIDE-OUT DRAWER -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <h3>Shopping Bag</h3>
+        <span class="cart-items-count-tag" id="drawerCartCount">0 items</span>
+      </div>
+      <button class="cart-close-btn" id="closeCartDrawer">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="shipping-progress-wrap">
+      <div class="progress-labels">
+        <span id="shippingProgressText">Add $0.00 more for FREE express shipping!</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="shippingProgressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Cart Footer with Promo and Totals -->
+    <div class="cart-footer" id="cartFooter">
+      <div class="promo-code-box">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. KICKS20)">
+        <button class="btn btn-sm btn-outline" id="applyPromoBtn">Apply</button>
+      </div>
+      <div class="promo-discount-tag" id="promoAppliedTag" style="display:none;">
+        <span>Promo KICKS20 (-20%) applied!</span>
+        <button id="removePromoBtn">&times;</button>
+      </div>
+
+      <div class="cart-summary-lines">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="summary-line" id="discountSummaryLine" style="display:none;">
+          <span>Discount</span>
+          <span id="cartDiscount" class="text-green">-$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Estimated Shipping</span>
+          <span id="cartShipping">FREE</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block btn-glow" id="proceedCheckoutBtn">
+        Proceed To Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- MULTI-STEP CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModalOverlay">
+    <div class="modal-container checkout-modal" id="checkoutModal">
+      <button class="modal-close-btn" id="closeCheckoutModal">&times;</button>
+      
+      <div class="checkout-header">
+        <div class="checkout-brand">
+          <span>SOLE</span><span class="logo-accent">VAULT</span> CHECKOUT
+        </div>
+        <div class="checkout-steps">
+          <div class="step-indicator active" id="step1Indicator">1. Shipping</div>
+          <div class="step-separator"></div>
+          <div class="step-indicator" id="step2Indicator">2. Payment</div>
+          <div class="step-separator"></div>
+          <div class="step-indicator" id="step3Indicator">3. Confirmation</div>
+        </div>
+      </div>
+
+      <form class="checkout-form" id="checkoutForm">
+        
+        <!-- STEP 1: SHIPPING DETAILS -->
+        <div class="checkout-step-content" id="checkoutStep1">
+          <h3 class="step-heading">Delivery Destination</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="checkoutName">Full Recipient Name</label>
+              <input type="text" id="checkoutName" class="custom-input" placeholder="e.g. Liam Sterling" required>
+            </div>
+            <div class="form-group">
+              <label for="checkoutEmail">Email Address (Order Tracking)</label>
+              <input type="email" id="checkoutEmail" class="custom-input" placeholder="liam@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="checkoutPhone">Phone Number</label>
+              <input type="tel" id="checkoutPhone" class="custom-input" placeholder="+1 (555) 019-2834" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="checkoutAddress">Street Address</label>
+              <input type="text" id="checkoutAddress" class="custom-input" placeholder="452 Broadway, Penthouse 4B" required>
+            </div>
+            <div class="form-group">
+              <label for="checkoutCity">City</label>
+              <input type="text" id="checkoutCity" class="custom-input" placeholder="New York" required>
+            </div>
+            <div class="form-group">
+              <label for="checkoutPostal">Postal / ZIP Code</label>
+              <input type="text" id="checkoutPostal" class="custom-input" placeholder="10013" required>
+            </div>
+          </div>
+
+          <div class="shipping-options-section">
+            <label class="section-sublabel">Shipping Speed</label>
+            <div class="shipping-method-cards">
+              <label class="shipping-method-card active">
+                <input type="radio" name="shippingSpeed" value="standard" checked>
+                <div class="method-info">
+                  <div class="method-title">Standard Courier Delivery</div>
+                  <div class="method-desc">3-5 Business Days • Vault Insured</div>
+                </div>
+                <div class="method-price">FREE</div>
+              </label>
+
+              <label class="shipping-method-card">
+                <input type="radio" name="shippingSpeed" value="express">
+                <div class="method-info">
+                  <div class="method-title">Next-Day Priority Air</div>
+                  <div class="method-desc">1 Business Day • Realtime GPS Vault Lock</div>
+                </div>
+                <div class="method-price">+$15.00</div>
+              </label>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-secondary" id="cancelCheckoutBtn">Back To Cart</button>
+            <button type="button" class="btn btn-primary" id="goToStep2Btn">Continue to Payment →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: PAYMENT METHOD -->
+        <div class="checkout-step-content" id="checkoutStep2" style="display:none;">
+          <h3 class="step-heading">Secure Payment</h3>
+          
+          <div class="payment-tabs">
+            <button type="button" class="payment-tab active" data-method="Credit Card">
+              <span>💳 Credit Card</span>
+            </button>
+            <button type="button" class="payment-tab" data-method="Apple Pay">
+              <span> Apple / GPay</span>
+            </button>
+            <button type="button" class="payment-tab" data-method="Cash On Delivery">
+              <span>📦 Cash On Delivery</span>
+            </button>
+          </div>
+
+          <!-- Mock Card Details -->
+          <div class="card-details-box" id="cardDetailsBox">
+            <div class="simulated-card-badge">
+              <span>SANDBOX MOCK PAYMENT GATEWAY</span>
+            </div>
+            <div class="form-group full-width">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" class="custom-input" placeholder="4532 •••• •••• 8821" value="4532 8920 1823 8821" required>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cardExpiry">Expiration</label>
+                <input type="text" id="cardExpiry" class="custom-input" placeholder="MM/YY" value="08/29" required>
+              </div>
+              <div class="form-group">
+                <label for="cardCVC">CVC / CVV</label>
+                <input type="text" id="cardCVC" class="custom-input" placeholder="892" value="892" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary review before paying -->
+          <div class="checkout-final-summary">
+            <div class="summary-row">
+              <span>Total Items:</span>
+              <strong id="checkoutItemsCount">0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Order Total to Pay:</span>
+              <strong class="text-neon" id="checkoutTotalPay">$0.00</strong>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-secondary" id="backToStep1Btn">← Back to Shipping</button>
+            <button type="submit" class="btn btn-primary btn-glow" id="submitOrderBtn">
+              Authorize & Place Order
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: ORDER CONFIRMATION / RECEIPT -->
+        <div class="checkout-step-content" id="checkoutStep3" style="display:none;">
+          <div class="order-success-card">
+            <div class="success-icon-wrap">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h2>ORDER CONFIRMED!</h2>
+            <p class="order-congrats-sub">Thank you for shopping at SoleVault. Your sneaker allocation has been secured and dispatched to authentication inspection.</p>
+
+            <div class="receipt-box" id="orderReceiptBox">
+              <div class="receipt-header">
+                <div>
+                  <div class="receipt-label">Order Number</div>
+                  <div class="receipt-number" id="receiptOrderNum">SV-98124</div>
+                </div>
+                <div>
+                  <div class="receipt-label">Status</div>
+                  <div class="badge-status confirmed">Confirmed</div>
+                </div>
+              </div>
+              <div class="receipt-divider"></div>
+              <div class="receipt-row">
+                <span>Customer:</span>
+                <strong id="receiptCustomer">Liam Sterling</strong>
+              </div>
+              <div class="receipt-row">
+                <span>Email Confirmation:</span>
+                <strong id="receiptEmail">liam@example.com</strong>
+              </div>
+              <div class="receipt-row">
+                <span>Amount Paid:</span>
+                <strong class="receipt-total" id="receiptAmount">$219.99</strong>
+              </div>
+            </div>
+
+            <div class="receipt-actions">
+              <button type="button" class="btn btn-secondary" onclick="window.print()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                Print Receipt
+              </button>
+              <button type="button" class="btn btn-primary" id="finishCheckoutBtn">Back to Storefront</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- WISHLIST DRAWER / MODAL -->
+  <div class="modal-overlay" id="wishlistModalOverlay">
+    <div class="modal-container wishlist-modal" id="wishlistModal">
+      <button class="modal-close-btn" id="closeWishlistModal">&times;</button>
+      <div class="wishlist-header">
+        <h2 class="section-title">Your Saved Wishlist</h2>
+        <span class="sub-heading" id="wishlistModalCount">0 Sneakers Saved</span>
+      </div>
+      <div class="wishlist-grid" id="wishlistGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN MANAGEMENT MODAL -->
+  <div class="modal-overlay" id="adminModalOverlay">
+    <div class="modal-container admin-modal" id="adminModal">
+      <button class="modal-close-btn" id="closeAdminModal">&times;</button>
+      
+      <div class="admin-header">
+        <div>
+          <span class="sub-heading">OPERATIONS DASHBOARD</span>
+          <h2 class="section-title">SoleVault Control Center</h2>
+        </div>
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" id="adminTabOrders">Recent Orders</button>
+          <button class="admin-tab-btn" id="adminTabAddShoe">+ Add New Shoe</button>
+          <button class="admin-tab-btn" id="adminTabInventory">Stock Inventory</button>
+        </div>
+      </div>
+
+      <!-- Admin Tab 1: Orders -->
+      <div class="admin-tab-content" id="adminOrdersContent">
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order #</th>
+                <th>Customer</th>
+                <th>Email</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="adminOrdersTableBody">
+              <!-- Loaded via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Admin Tab 2: Add New Shoe Form -->
+      <div class="admin-tab-content" id="adminAddShoeContent" style="display:none;">
+        <form class="admin-add-form" id="adminAddShoeForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Shoe Model Name *</label>
+              <input type="text" id="newShoeName" class="custom-input" placeholder="e.g. Apex Velocity Nitro" required>
+            </div>
+            <div class="form-group">
+              <label>Brand *</label>
+              <select id="newShoeBrand" class="custom-select" required>
+                <option value="Nike">Nike</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Adidas">Adidas</option>
+                <option value="SoleVault Lab">SoleVault Lab</option>
+                <option value="Vans">Vans</option>
+                <option value="SoleVault Luxe">SoleVault Luxe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Category *</label>
+              <select id="newShoeCategory" class="custom-select" required>
+                <option value="Running">Running</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Skate">Skate</option>
+                <option value="Luxury">Luxury</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Price ($ USD) *</label>
+              <input type="number" id="newShoePrice" step="0.01" class="custom-input" placeholder="189.99" required>
+            </div>
+            <div class="form-group">
+              <label>Original / Retail Price ($ USD)</label>
+              <input type="number" id="newShoeOrigPrice" step="0.01" class="custom-input" placeholder="220.00">
+            </div>
+            <div class="form-group">
+              <label>Warehouse Stock Quantity *</label>
+              <input type="number" id="newShoeStock" class="custom-input" placeholder="15" value="15" required>
+            </div>
+            <div class="form-group">
+              <label>Status Badge</label>
+              <input type="text" id="newShoeBadge" class="custom-input" placeholder="e.g. LIMITED, NEW RELEASE" value="NEW ARRIVAL">
+            </div>
+            <div class="form-group">
+              <label>Product Image</label>
+              <select id="newShoeImage" class="custom-select">
+                <option value="/images/products/volt_runner.jpg">AeroFlux Volt Runner</option>
+                <option value="/images/products/retro_high.jpg">Air Heritage Retro High</option>
+                <option value="/images/products/onyx_boost.jpg">V-Matrix Onyx Stealth</option>
+                <option value="/images/products/cyber_cyan.jpg">Aether Cyber Cyan</option>
+                <option value="/images/products/skate_olive.jpg">Vanguard Skate Olive</option>
+                <option value="/images/products/cloud_white.jpg">Monaco Minimalist Trainer</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label>Shoe Description</label>
+              <textarea id="newShoeDesc" class="custom-input" rows="3" placeholder="Engineered with breathable mesh and responsive kinetic cushioning."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-glow">Add Shoe To Vault</button>
+        </form>
+      </div>
+
+      <!-- Admin Tab 3: Inventory List with Instant Delete/Restock -->
+      <div class="admin-tab-content" id="adminInventoryContent" style="display:none;">
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Shoe Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminInventoryTableBody">
+              <!-- Loaded via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <div class="logo-text">
+          <span>SOLE</span><span class="logo-accent">VAULT</span>
+        </div>
+        <p>The definitive global destination for authenticated sneaker grails, elite athletic runners, and luxury footwear innovation.</p>
+        <div class="footer-badges">
+          <span class="secure-tag">🔒 256-Bit SSL Encrypted</span>
+          <span class="secure-tag">⚡ Same-Day Dispatch</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Catalog</h4>
+        <a href="#catalog" onclick="filterByCategory('Running')">Running Shoes</a>
+        <a href="#catalog" onclick="filterByCategory('Basketball')">Basketball High-Tops</a>
+        <a href="#catalog" onclick="filterByCategory('Lifestyle')">Lifestyle & Streetwear</a>
+        <a href="#catalog" onclick="filterByCategory('Skate')">Skate Shoes</a>
+        <a href="#catalog" onclick="filterByCategory('Luxury')">Luxury Leather Trainers</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Customer Care</h4>
+        <a href="#" id="footerSizeGuide">Size & Fit Guide</a>
+        <a href="#" id="footerAuthPolicy">Vault 12-Point Authentication</a>
+        <a href="#" id="footerTrackOrder">Track Your Shipment</a>
+        <a href="#" id="footerReturns">Returns & Refunds</a>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Join The Drop List</h4>
+        <p>Never miss a shock drop or limited raffle.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); showToast('Subscribed to VIP drop alerts!', 'success');">
+          <input type="email" placeholder="Enter your email" required class="custom-input">
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 SoleVault Inc. All rights reserved. Full-stack footwear eCommerce architecture.</p>
+      <div class="footer-cards-icons">
+        <span>VISA</span> • <span>MASTERCARD</span> • <span>AMEX</span> • <span>APPLE PAY</span> • <span>PAYPAL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

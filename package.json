@@ -1,0 +1,16 @@
+{
+  "name": "solevault-shoe-ecommerce",
+  "version": "1.0.0",
+  "description": "Full-stack shoe eCommerce platform with Express, SQLite, and modern storefront",
+  "main": "server/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "seed": "node server/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

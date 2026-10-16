@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  solevault-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: solevault:latest
+    container_name: solevault_ecommerce
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      # Persist SQLite database across container rebuilds
+      - solevault-data:/app/database
+
+volumes:
+  solevault-data:
+    driver: local
